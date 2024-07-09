@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLStock WebApp</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">SQLStock WebApp</h1>
+        <form action="{{ url_for('update_dates') }}" method="post">
+            <button type="submit" class="btn btn-primary">Update Dates</button>
+        </form>
+        <form action="{{ url_for('calculate_ma') }}" method="post">
+            <button type="submit" class="btn btn-primary mt-2">Calculate Moving Averages</button>
+        </form>
+        <a href="{{ url_for('display_data') }}" class="btn btn-primary mt-2">Display Data</a>
+    </div>
+</body>
+</html>
